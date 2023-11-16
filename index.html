@@ -1,0 +1,1459 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600&family=Roboto:wght@700&display=swap"
+        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Raleway&display=swap" rel="stylesheet">
+    <title>Hogi clone</title>
+</head>
+<style>
+    body {
+        padding: 0%;
+        margin: 0%;
+        box-sizing: border-box;
+    }
+
+    .main-container {
+        background-image: url('https://hogi.io/wp-content/themes/twentytwenty/assets/src/images/section-bg1.svg');
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    /* navbar */
+    .navbar {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        position: sticky;
+        top: 0px;
+        z-index: 10;
+    }
+
+    .logo {
+        height: 100px;
+        width: 100px;
+        margin-left: 110px;
+    }
+
+    .middle-item {
+        display: flex;
+        font-size: 1.1em;
+        gap: 16px;
+        background-color: rgb(229, 229, 229);
+        border-radius: 10px;
+        opacity: .9;
+    }
+
+    .middle-item li {
+        padding: 10px;
+        margin: 8px;
+        transition: all 300ms;
+    }
+
+    .middle-item li:hover {
+        background-color: rgb(255, 255, 255);
+        border-radius: 10px;
+        color: #604B9E;
+        cursor: pointer;
+        opacity: 1;
+    }
+
+    .navbar button {
+        display: flex;
+        gap: 10px;
+        padding: 18px;
+        background-color: rgb(244, 244, 244);
+        margin-right: 35px;
+        border-radius: 15px;
+        color: #604B9E;
+        background-color: white;
+        transition: all 100ms;
+        border: .5px solid #604B9E;
+    }
+
+    .navbar button:hover {
+        background-color: rgb(244, 244, 244);
+    }
+
+    /* ========================================================================================================= */
+
+    /* first-video portion */
+
+    .first-img {
+        display: flex;
+        justify-content: center;
+    }
+
+    .first-img .container {
+        height: 80vh;
+        width: 90vw;
+        margin-top: 25px;
+    }
+
+    .first-vedio {
+        height: inherit;
+        width: 100%;
+        object-fit: cover;
+        border-radius: 60px;
+    }
+
+    .vedio-text p {
+        font-size: 4.5em;
+        position: absolute;
+        width: 90%;
+        text-align: center;
+        top: 290px;
+        color: white;
+        font-family: 'Roboto', sans-serif;
+    }
+
+    /* ====================================================================================================== */
+
+    /* Second Image portion */
+
+    .second-img {
+        display: flex;
+        justify-content: center;
+        margin-top: 100px;
+    }
+
+    .second-img .container {
+        display: flex;
+        height: 60vh;
+        width: 90vw;
+        justify-content: space-between;
+        background-image: linear-gradient(96.79deg, #D5D8E7 -7.57%, #DEE0ED 105.54%);
+        border-radius: 200px;
+    }
+
+    .text2 {
+        height: 100%;
+        width: 32%;
+        display: flex;
+        flex-direction: column;
+        margin-left: 160px;
+        margin-top: 20px;
+        object-fit: cover;
+        gap: 15px;
+    }
+
+    .text2 .p1 {
+        font-family: 'Roboto', sans-serif;
+        color: white;
+        font-size: 62px;
+        line-height: 60px;
+    }
+
+    .text2 .p2 {
+        font-size: 32px;
+        line-height: 35px;
+        font-family: 'Roboto', sans-serif;
+        color: white;
+    }
+
+    .text2 .p3 {
+        font-size: 2em;
+        font-family: 'Roboto', sans-serif;
+        color: rgb(55, 43, 226);
+        margin-top: 15px;
+    }
+
+    .img2 {
+        height: 100%;
+        width: 50%;
+        object-fit: cover;
+    }
+
+    /* ========================================================================================================= */
+
+    /* About HOGI  ----------> PORTION 3*/
+
+    .about-hogi {
+        width: 100vw;
+        height: fit-content;
+        display: flex;
+        justify-content: center;
+        margin-top: 150px;
+        background-color: white;
+    }
+
+    .about-hogi .container {
+        height: fit-content;
+        width: 90%;
+        display: flex;
+        gap: 20px;
+    }
+
+    .vedio-portion3 {
+        display: flex;
+        justify-content: center;
+        height: fit-content;
+        width: 55%;
+        background-color: rgb(243, 243, 243);
+        border-radius: 20px;
+    }
+
+    .hogi-vedio {
+        height: fit-content;
+        width: 99%;
+        object-fit: cover;
+        border-radius: 20px;
+    }
+
+    .text-portion3 {
+        display: flex;
+        flex-direction: column;
+        gap: 50px;
+        height: 810px;
+        width: 45%;
+        line-height: 32px;
+        background-color: rgb(249, 249, 249);
+        border-radius: 20px;
+
+    }
+
+    .text-portion3 .head {
+        color: #5225da;
+        font-family: 'Roboto', sans-serif;
+        font-size: 30px;
+        margin-left: 30px;
+        margin-top: 30px;
+    }
+
+    .text-portion3 .p2 {
+        color: #5225da;
+        font-family: 'Roboto', sans-serif;
+        font-size: 30px;
+        margin-left: 30px;
+    }
+
+    .text-portion3 .p1,
+    .p3,
+    .p4 {
+        font-size: 25px;
+        margin-left: 30px;
+    }
+
+
+    /* ========================================================================================================= */
+
+    /* WHAT-SERVICE  */
+
+    .what-service {
+        height: fit-content;
+        width: 100vw;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-top: 80px;
+        background-color: #0B0616;
+        color: whitesmoke;
+    }
+
+    .what-service .container1 {
+        height: fit-content;
+        width: 90%;
+        display: flex;
+        margin-top: 100px;
+    }
+
+    .container1 .left-portion {
+        display: flex;
+        flex-direction: column;
+        width: 50%;
+        gap: 35px;
+    }
+
+    .left-portion img {
+        width: 370px;
+        height: 370px;
+    }
+
+    .left-portion h1 {
+        font-size: 45px;
+        line-height: 48px;
+        font-family: 'Poppins', sans-serif;
+    }
+
+    .left-portion p {
+        font-size: 20px;
+        font-family: 'Roboto', sans-serif;
+    }
+
+    /* right-portion */
+
+    .right-portion {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        height: 657.5px;
+        width: 50%;
+        margin-left: 20px;
+        box-sizing: border-box;
+        font-size: 30px;
+    }
+
+    .right-portion div {
+        margin-left: 10px;
+        box-sizing: border-box;
+        transition: all 100ms;
+        height: 100%;
+        width: 100%;
+        display: flex;
+        align-items: center;
+
+    }
+
+    .right-portion div:hover {
+        font-size: 32px;
+        border-bottom: 3px solid #5225da;
+        background-color: #110921;
+        cursor: pointer;
+    }
+
+    hr {
+        border: .1px solid rgb(51, 51, 51);
+    }
+
+
+    /* Choosing Us portion */
+
+
+    .what-service .container2 {
+        display: flex;
+        flex-direction: column;
+        height: fit-content;
+        width: 90%;
+        display: flex;
+        margin-top: 80px;
+    }
+
+    .container2 h1 {
+        width: 100%;
+        font-size: 40px;
+        font-family: 'Poppins', sans-serif;
+
+    }
+
+    .feature {
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+        margin-top: 30px;
+    }
+
+    .feature .card {
+        width: 23%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+        text-align: center;
+        background-color: #160f25;
+        border-radius: 20px;
+        padding: 15px;
+    }
+
+    .feature .card-head {
+        font-size: 30px;
+    }
+
+    .feature img {
+        height: 80px;
+        width: 80px;
+    }
+
+    /* ================================================================================================================================== */
+
+    /* GET-IN-TOUCH-PORTION */
+
+
+    /* left portion */
+    .get-in-touch {
+        width: 100vw;
+        display: flex;
+        justify-content: center;
+        background-color: white;
+    }
+
+    .container3 {
+        width: 90%;
+        display: flex;
+        background-color: white;
+        border-radius: 20px;
+        margin-top: 100px;
+    }
+
+    .left-img {
+        width: 65%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        color: white;
+    }
+
+    .left-img img {
+        height: inherit;
+        object-fit: cover;
+    }
+
+    .git-text {
+        position: absolute;
+        width: 30%;
+        height: fit-content;
+    }
+
+    .git-p1 {
+        font-size: 35px;
+    }
+
+    .git-p2 {
+        font-size: 25px;
+    }
+
+    /* right portion */
+
+    .right-button {
+        width: 35%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        margin-left: 25px;
+    }
+
+    .right-button div {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 20px;
+        border: 1px solid black;
+        width: 90%;
+        height: 35%;
+        border-radius: 25px;
+        font-size: 25px;
+        transition: all 100ms;
+        border: none;
+        background-color: rgb(237, 237, 237);
+    }
+
+    .right-button div:hover {
+        background-image: linear-gradient(140deg, rgb(25, 146, 190), rgb(255, 213, 99), rgb(255, 145, 0), rgb(255, 0, 153));
+        cursor: pointer;
+        color: white;
+    }
+
+
+    /* ============================================================================================================================== */
+
+    /* BRANDS */
+
+    .brands {
+        width: 100vw;
+        background-color: rgb(255, 255, 255);
+        display: flex;
+        justify-content: center;
+    }
+
+    .container4 {
+        width: 90%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        margin-top: 150px;
+    }
+
+    .container4 .text {
+        width: 50%;
+    }
+
+    .text h1 {
+        font-size: 50px;
+    }
+
+    .text p {
+        font-size: 20px;
+    }
+
+    .campany {
+        display: flex;
+        width: 100%;
+        justify-content: space-around;
+        margin-top: 100px;
+    }
+
+    .campany img {
+        height: 80px;
+        width: 220px;
+        background-color: rgb(237, 237, 237);
+    }
+
+    /* ================================================================================================================================== */
+
+
+    /* ATTENTION */
+
+    .attention {
+        width: 100vw;
+        display: flex;
+        justify-content: center;
+        background-image: linear-gradient(140deg, rgb(63, 23, 196), rgb(135, 130, 228));
+        margin-top: 100px;
+
+
+    }
+
+    .container5 {
+        width: 90%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        /* text-align: center; */
+        margin-top: 100px;
+        margin-bottom: 80px;
+    }
+
+    /* text-portion */
+    .attention-text {
+        width: 80%;
+        text-align: center;
+    }
+
+    .text-head {
+        font-size: 45px;
+        color: rgb(255, 187, 60);
+    }
+
+    .upper-text {
+        font-size: 38px;
+        color: white;
+        margin-top: 70px;
+    }
+
+    /* form-portion */
+
+    .form-portion {
+        width: 100%;
+        display: flex;
+        box-sizing: border-box;
+        margin-top: 90px;
+
+    }
+
+    .form1 {
+        display: flex;
+        flex-direction: column;
+        width: 50%;
+        border-radius: 40px;
+        background-color: white;
+    }
+
+    .form-head {
+        color: black;
+        font-size: 35px;
+        margin-top: 15px;
+        margin-left: 25px;
+        font-family: 'Poppins', sans-serif;
+    }
+
+    form {
+        margin-top: 35px;
+        margin-left: 25px;
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+        margin-bottom: 10px;
+    }
+
+    form input {
+        padding: 10px;
+        width: 95%;
+        background-color: aliceblue;
+    }
+
+    input[type=text] {
+        box-sizing: border-box;
+        border: .5px solid #ccc;
+        transition: 0.5s;
+        outline: none;
+    }
+
+    input[type=text]:focus {
+        border: 1px solid rgb(0, 0, 217);
+    }
+
+
+    form button {
+        padding: 8px;
+        background-color: black;
+        color: yellow;
+        width: 100px;
+        border-radius: 15px;
+        transition: all 500ms;
+        font-family: 'Poppins', sans-serif;
+        box-sizing: border-box;
+        margin-top: 25px;
+        margin-bottom: 25px;
+    }
+
+    form button:hover {
+        background-color: transparent;
+        color: #000000;
+        cursor: pointer;
+        border: 1px solid black;
+    }
+
+    /* We Know the Screte Portion */
+
+
+    .we-know {
+        width: 50%;
+        background-color: white;
+        margin-left: 25px;
+        border-radius: 40px;
+        color: black;
+    }
+
+    .we-know .p1 {
+        width: 80%;
+        color: black;
+        font-size: 45px;
+        margin-left: 30px;
+        margin-top: 25px;
+        font-family: 'Poppins', sans-serif;
+        line-height: 55px;
+    }
+
+    .we-know .p2 {
+        color: #5e18e0;
+        font-size: 30px;
+        margin-left: 30px;
+        font-family: 'Poppins', sans-serif;
+    }
+
+    .we-know .p2:hover {
+        cursor: pointer;
+    }
+
+    .we-know img {
+        padding: 20px;
+    }
+
+    /* ==================================================================================================================================== */
+
+    /* STAY-INSPIRE-PORTION */
+
+    .stay-inspire {
+        width: 100vw;
+        background-color: #0B0616;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+
+    /* FIRST-CONTAINER */
+
+    .container6 {
+        width: 100%;
+        display: flex;
+    }
+
+    .si-video-tag {
+        position: absolute;
+        height: 600px;
+        object-fit: cover;
+        width: 100%;
+    }
+
+    /* left-portion */
+    .si-left-portion {
+        display: flex;
+        flex-direction: column;
+        width: 40%;
+        gap: 20px;
+        z-index: 10;
+        margin-left: 90px;
+        margin-top: 150px;
+    }
+
+    .si-left-portion .p1 {
+        font-size: 45px;
+        color: white;
+        font-family: 'Poppins', sans-serif;
+    }
+
+    .si-left-portion .p2 {
+        font-size: 20px;
+        color: white;
+        font-family: 'Poppins', sans-serif;
+    }
+
+    .si-left-portion div {
+        padding: 22px;
+        color: white;
+        background-color: #6840e0;
+        font-family: 'Poppins', sans-serif;
+        width: 220px;
+        text-align: center;
+        border-radius: 20px;
+        font-size: 22px;
+        transition: all 1s;
+    }
+
+    .si-left-portion div:hover {
+        background-color: #2d00b6;
+        cursor: pointer;
+    }
+
+
+    /* right-portion */
+
+    .si-right-portion {
+        display: flex;
+        width: 50%;
+        z-index: 10;
+        margin-top: 100px;
+        margin-left: 60px;
+    }
+
+    .fear-part {
+        width: 50%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        color: white;
+        font-family: 'Poppins', sans-serif;
+        font-size: 22px;
+    }
+
+    .podcast-part {
+        width: 25%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        color: white;
+        gap: 30px;
+    }
+
+    .podcast-part .head {
+        font-family: 'Poppins', sans-serif;
+        font-size: 22px;
+    }
+
+
+    /* SECOND CONTAINER 7 */
+
+    .container7 {
+        width: 100%;
+        margin-top: 200px;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+
+    }
+
+    .test-tag {
+        width: 100%;
+        font-size: 13vw;
+        line-height: 11vw;
+        letter-spacing: 0.02em;
+        color: rgb(177, 129, 255);
+        text-align: center;
+        -webkit-text-fill-color: transparent;
+        -webkit-text-stroke-width: 4px;
+        opacity: 0.5;
+        user-select: none;
+        font-weight: 700;
+    }
+
+    /* CARDS */
+
+    .cards {
+        width: 90%;
+        display: flex;
+        margin-top: 100px;
+        color: white;
+        gap: 20px;
+    }
+
+    .lissa-card {
+        width: 55%;
+        border-radius: 20px;
+        background-color: #604B9E;
+        padding: 12px;
+        transition: all 1s;
+    }
+    .lissa-card:hover{
+        background-color: white;
+        color:#604B9E ;
+    }
+
+    .arphin-card {
+        width: 55%;
+        border-radius: 20px;
+        background-color: #604B9E;
+        padding: 15px;
+        transition: all 1s;
+    }
+    .arphin-card:hover{
+        background-color: white;
+        color:#604B9E ;
+    }
+
+    .cards .p1 {
+        font-size: 30px;
+        font-family: 'Poppins', sans-serif;
+        line-height: 32px;
+        margin-top: 15px;
+        margin-left: 10px;
+    }
+
+    .cards .p2 {
+        font-size: 23px;
+        font-family: 'Raleway', sans-serif;
+        margin-left: 10px;
+    }
+
+    /* ================================================================================================================================= */
+
+    /* LOCATION */
+
+    .location {
+        width: 90%;
+        display: flex;
+        justify-content: space-around;
+        background: conic-gradient(from 200.2deg at 50% 50%, #3F1E85 0deg, #672CE6 360deg);
+        border-radius: 264px;
+        margin-top: 150px;
+    }
+
+    .location-text {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        color: white;
+        width: 40%;
+    }
+
+    .location-text .p1 {
+        font-size: 20px;
+        font-family: 'Raleway', sans-serif;
+    }
+
+    .location-text .p2 {
+        font-size: 40px;
+    }
+
+    /* follow */
+    .follow {
+        margin-top: 50px;
+        font-size: 28px;
+    }
+
+    .media {
+        display: flex;
+        gap: 8px;
+    }
+
+    .media button {
+        font-size: 20px;
+        padding: 10px;
+        border: 1px solid white;
+        border-radius: 10px;
+        transition: all 1s;
+    }
+
+    .media button:hover {
+        border: 1px solid #672CE6;
+        background-color: white;
+        color: #672CE6;
+    }
+
+    /* right-portion */
+
+    .location-right-portion {
+        display: flex;
+        flex-direction: column;
+        width: 40%;
+        color: white;
+        align-items: flex-end;
+        margin-right: 105px;
+        margin-top: 25px;
+        gap: 20px;
+    }
+
+    .rp-head {
+        font-size: 25px;
+        font-family: 'Poppins', sans-serif;
+    }
+
+    .rp-text {
+        font-size: 35px;
+    }
+
+    /* ========================================================================================================================= */
+
+    /* privacy policy */
+
+    .container8{
+        width: 90%;
+        display: flex;
+        margin-top: 100px;
+        margin-bottom: 50px;
+        justify-content: space-around;
+    }
+    .about-left-portion{
+        display: flex;
+        flex-direction: column;
+        color: white;
+        gap: 25px;
+        width: 40%;
+    }
+    .about-left-portion img{
+        height: 80px;
+        width: 120px;
+    }
+    .privacy{
+        display: flex;
+        gap: 30px;
+        font-family: 'Poppins', sans-serif;
+        transition: all 2s;
+        box-sizing: border-box;
+    }
+    .privacy div:hover{
+        border-bottom: 1px solid #6e3eff;
+        cursor: pointer;
+    }
+    .about-left-portion .p1{
+        font-family: 'Poppins', sans-serif;
+    }
+
+    /*about right portion */
+
+    .about-right-portion{
+        width: 50%;
+        display: flex;
+        margin-left: 100px;
+        gap: 100px;
+    }
+
+    .services{
+        display: flex;
+        flex-direction: column;
+        color: white;
+        justify-content: space-around;
+        font-size: 22px;
+        list-style-type: none;
+        gap: 8px;
+        
+    }
+    .our-campany{
+        display: flex;
+        flex-direction: column;
+        color: white;
+        justify-content: space-around;
+        font-size: 22px;
+        list-style-type: none;
+    }
+    .about-right-portion-head{
+        font-family: 'Poppins', sans-serif;
+        padding: 5px;
+    }
+    .about-right-portion li{
+        font-family: 'Raleway', sans-serif;
+    }
+    
+</style>
+
+<body>
+
+    <!-- main container -->
+
+    <div class="main-container">
+
+        <!-- navbar -->
+        <div class="navbar">
+
+            <!-- logo -->
+            <img class="logo" src="https://hogi.io/wp-content/themes/twentytwenty/assets/src/images/logo-1.svg"
+                alt="logo">
+
+            <!-- middle item -->
+            <ul class="middle-item">
+                <li>About Us</li>
+                <li>Service</li>
+                <li>Carrier</li>
+                <li>Media</li>
+                <li>Project</li>
+                <li>Team</li>
+                <li>Contact Us</li>
+            </ul>
+
+            <!-- button -->
+            <button>
+                <img src="https://hogi.io/wp-content/themes/twentytwenty/assets/src/icons/talk-to-us1.svg" alt="">
+                Request A Call</button>
+        </div>
+
+        <!----------------------------------------------------------------------------------------------------------------------->
+
+        <!-- First--video-image -->
+
+        <div class="first-img">
+            <div class="container">
+
+                <!-- first-vedio -->
+                <video class="first-vedio" autoplay muted playinline loop>
+                    <source src="https://hogi.io/wp-content/uploads/2023/05/hero1.mp4">
+                </video>
+
+                <div class="vedio-text">
+                    <p>Among Top 10 Marketing Agencies in Dubai</p>
+                </div>
+
+            </div>
+        </div>
+
+        <!--------------------------------------------------------------------------------------------------------------- -->
+
+        <!-- Second-Image -->
+
+        <div class="second-img">
+            <div class="container">
+
+                <!-- text -->
+                <div class="text2">
+                    <p class="p1">Award-Nominated Website</p>
+                    <p class="p2">Trust us to build your brand from an initial idea to global rollout</p>
+                    <p class="p3">From Dubai to the World</p>
+                </div>
+
+                <!-- image -->
+                <img class="img2" src="https://hogi.io/wp-content/uploads/2023/05/tagline2x-1200x718.webp" alt="">
+
+            </div>
+        </div>
+
+
+        <!------------------------------------------------------------------------------------------------------------>
+
+        <!-- About HOGI -->
+
+        <div class="about-hogi">
+
+            <div class="container">
+                <!-- vedio-portion -->
+                <div class="vedio-portion3">
+                    <video class="hogi-vedio" autoplay muted playinline loop>
+                        <source src="https://hogi.io/wp-content/uploads/2023/05/about-us.mp4" type="video/mp4">
+                    </video>
+                </div>
+
+                <!-- text-portion -->
+                <div class="text-portion3">
+                    <h1 class="head">ABOUT HOGI</h1>
+                    <p class="p1">HOGI is a dynamic full-service brand building agency with expertise in a wide range of
+                        industries.</p>
+                    <p class="p2">We are innovation catalysts that challenge cliches to help businesses become iconic.
+                    </p>
+                    <p class="p3">HOGI has a decentralized nature that connects talented people all over the world to
+                        bring
+                        change by delivering advanced marketing solutions.</p>
+                    <p class="p4">Being boundless and borderless, defines the essence of HOGI.</p>
+                </div>
+            </div>
+        </div>
+
+        <!------------------------------------------------------------------------------------------------------------>
+
+        <!-- WHAT-SERVICES -->
+        <div class="what-service">
+
+            <!-- We-offer -->
+
+            <div class="container1">
+
+                <!-- left-portion -->
+                <div class="left-portion">
+
+                    <!-- text -->
+                    <h1>What services <br> we offer</h1>
+                    <p>We provide <b>full-scale branding and advertising</b> services tailored to your business needs.
+                        Whether you need a piece of content, social media management, media placements, or a complete
+                        brand building solution, we’ve got you covered. We help you navigate change.</p>
+
+                    <!-- image -->
+                    <img src="https://hogi.io/wp-content/uploads/2023/06/service.webp" alt="">
+                </div>
+
+                <!-- right-portion -->
+                <div class="right-portion">
+
+                    <div class=""> Strategy</div>
+                    <hr>
+                    <div class=""> Branding</div>
+                    <hr>
+                    <div class=""> Digital Marketing</div>
+                    <hr>
+                    <div class=""> Creative</div>
+                    <hr>
+                    <div class=""> Content Writing</div>
+                    <hr>
+                    <div class=""> Vedio Production</div>
+                    <hr>
+                    <div class=""> Web Development</div>
+                    <hr>
+                    <div class=""> Web 3.0 Marketing</div>
+
+                </div>
+
+            </div>
+
+
+            <!-- Chossing Us -->
+            <div class="container2">
+                <h1>Choosing Us <br>
+                    Choosing Quality</h1>
+
+                <div class="feature">
+
+                    <!-- card 1 -->
+                    <div class="card" id="card1">
+                        <p class="card-num">01</p>
+                        <img src="https://hogi.io/wp-content/uploads/2023/10/services.png" alt="">
+                        <p class="card-head">All-Inclusive Excellence</p>
+                        <p class="card-p3">We offer an all-in-one solution that nurtures your business growth, from idea
+                            to realization. Our expertise encompasses everything you need to thrive.</p>
+                    </div>
+
+                    <!-- card 2 -->
+                    <div class="card" id="card2">
+                        <p class="card-num">02</p>
+                        <img src="https://hogi.io/wp-content/uploads/2023/10/how-collaborate.png" alt="">
+                        <p class="card-head">Global Reach</p>
+                        <p class="card-p3">Our worldwide presence extends your opportunities. With offices across the
+                            globe, we bring a global perspective to your local aspirations.</p>
+                    </div>
+
+                    <!-- card 3 -->
+                    <div class="card" id="card3">
+                        <p class="card-num">03</p>
+                        <img src="https://hogi.io/wp-content/uploads/2023/10/why-hogi.png" alt="">
+                        <p class="card-head">Proven Triumphs</p>
+                        <p class="card-p3">We have written over 10 success stories and we are ready to add yours to the
+                            collection. Our track record speaks volumes about what we can achieve together.</p>
+                    </div>
+
+                    <!-- card 4 -->
+                    <div class="card" id="card4">
+                        <p class="card-num">03</p>
+                        <img src="https://hogi.io/wp-content/uploads/2023/10/the-result.png" alt="">
+                        <p class="card-head">Your Trusted Team</p>
+                        <p class="card-p3">Our dedicated, passionate team becomes an extension of your vision. We invest
+                            our souls and minds to fuel your journey to success.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- ============================================================================================================================= -->
+
+        <!-- GET IN TOUCH -->
+
+        <div class="get-in-touch">
+            <div class="container3">
+                <div class="left-img">
+                    <img src="	https://hogi.io/wp-content/uploads/2023/05/contact-us2x.webp" alt="">
+                    <div class="git-text">
+                        <p class="git-p1"><b>Get in touch with us</b></p>
+                        <p class="git-p2">We are the bridge to your brands brightest future.</p>
+                    </div>
+                </div>
+                <div class="right-button">
+                    <div>Drop An Email</div>
+                    <div>Request A Call</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- ============================================================================================================================= -->
+
+        <!-- Brands -->
+
+        <div class="brands">
+            <div class="container4">
+                <!-- text -->
+                <div class="text">
+                    <h1><b>Brands</b></h1>
+                    <p>Don't take our word for it. Dive into our portfolio, listen to the stories of those we’ve served,
+                        and witness the transformative power of our services.</p>
+                </div>
+
+                <!-- campany -->
+                <div class="campany">
+                    <img src="https://hogi.io/wp-content/uploads/2023/05/Frame-179.webp" alt="">
+                    <img src="https://hogi.io/wp-content/uploads/2023/05/Reebok.webp" alt="">
+                    <img src="https://hogi.io/wp-content/uploads/2023/05/rutube.webp" alt="">
+                    <img src="https://hogi.io/wp-content/uploads/2023/05/Ralph-Lauren.webp" alt="">
+                    <img src="https://hogi.io/wp-content/uploads/2023/05/Semrush.webp" alt="">
+                </div>
+
+            </div>
+        </div>
+
+        <!-- ============================================================================================================================= -->
+
+        <!-- ATTENTION -->
+
+        <div class="attention">
+            <div class="container5">
+
+                <!-- text-portion -->
+                <div class="attention-text">
+                    <h1 class="text-head"><b>ATTENTION</b></h1>
+                    <p class="upper-text"><b>If you have reached this point and you are reading this now, it is high
+                            time to kickstart your dream brand, rewrite it from the ground up and promote it.</b></p>
+                </div>
+
+                <!-- form portion -->
+                <div class="form-portion">
+                    <div class="form1">
+                        <h1 class="form-head">Schedule a complimentary consultation with us by filling in this form</h1>
+
+                        <form>
+                            <div><label for="name">Full Name</label> <br>
+                                <input type="text" name="name" id="name"> <br>
+                            </div>
+
+                            <div><label for="camp-name">Campany Name</label> <br>
+                                <input type="text" name="camp-name" id="camp-name"> <br>
+                            </div>
+
+                            <div><label for="Email">E-Mail</label> <br>
+                                <input type="text" name="Email" id="Email"> <br>
+                            </div>
+
+                            <div><label for="ph">Phone No.</label> <br>
+                                <input type="text" name="ph" id="ph"> <br>
+                            </div>
+
+                            <div>
+                                <label for="speaks">Speaks Up's Your Primary Goals</label>
+                                <input type="text">
+                            </div>
+
+                            <button>Sumbit</button>
+                        </form>
+                    </div>
+
+
+                    <!-- /* We Know the Screte Portion */ -->
+
+                    <div class="we-know">
+                        <p class="p1">We know the secret formula to <strong style="color: #5225da;">uprise your business
+                                10x </strong>from where you are.</p>
+                        <br>
+                        <p class="p2">Lets Talk ↑</p>
+                        <img src="https://hogi.io/wp-content/uploads/2023/10/image-2-1.webp" alt="">
+                    </div>
+                </div>
+
+
+            </div>
+        </div>
+
+        <!-- ============================================================================================================================ -->
+
+        <!-- Stay Inspire -->
+
+        <div class="stay-inspire">
+            <div class="container6">
+
+                <!-- vedio-tag -->
+                <video class="si-video-tag" autoplay muted playinline loop>
+                    <source src="https://hogi.io/wp-content/uploads/2023/06/hero3.mp4">
+                </video>
+
+
+                <!-- left portion -->
+                <div class="si-left-portion">
+                    <p class="p1">Stay inspired,stay informed</p>
+                    <p class="p2">We create trustworthy audio, visual and written content. Stay tuned with us</p>
+                    <div class="media-button">Media Page</div>
+                </div>
+
+                <!-- right-portion -->
+                <div class="si-right-portion">
+
+                    <!-- fear-part -->
+                    <div class="fear-part">
+                        <p>FEARLESS</p>
+                        <p>FRESH</p>
+                        <p>FORWARD-THINKING</p>
+                        <p>FUTURISTIC</p>
+                    </div>
+                    <!-- padcast-part -->
+                    <div class="podcast-part">
+                        <div>
+                            <p class="head">PODCASTS
+                            <p>Listening to informative podcasts on the go</p>
+                            </p>
+                        </div>
+                        <div>
+                            <p class="head">NEWS
+                            <p>Staying up to date with industry news</p>
+                            </p>
+                        </div>
+                        <div>
+                            <p class="head">BLOGS
+                            <p>Learning what's next to stay on top of</p>
+                            </p>
+                        </div>
+                        <div>
+                            <p class="head">ARTICLES
+                            <p>Reading interesting articles on web3, tech spheres</p>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- container 7 -->
+
+            <div class="container7">
+
+                <!-- heading -->
+                <div class="test-tag">
+                    <p>TESTIMONIAL</p>
+                </div>
+
+                <!-- cards -->
+                <div class="cards">
+                    <!-- lissa card -->
+                    <div class="lissa-card">
+                        <p class="p1">Lissa // An Administrative Officer at Amalden MEENA</p> <br>
+                        <p class="p2"> “Our request for marketing activities encompassed engaging prospects, generating
+                            leads, reengaging existing customers, enhancing customer satisfaction, and boosting brand
+                            awareness. Our collaboration was brimming with creative ideas. This team is nothing short of
+                            amazing.”</p>
+                    </div>
+
+                    <!-- Arphine card -->
+                    <div class="arphin-card">
+                        <p class="p1">Arphin // Art Director At OOTTEE</p> <br>
+                        <p class="p2"> “HOGI delivered a top-class website, design, and strategy. We enjoyed seamless
+                            communication, a highly professional approach, and a deep understanding of project details.”
+                        </p>
+                    </div>
+
+                </div>
+
+
+            </div>
+
+
+            <!-- Location -->
+            <div class="location">
+
+                <!-- text-portion -->
+                <div class="location-text">
+                    <p class="p1">LOCATION</p>
+                    <p class="p2">Worldwide. We are there where you are!</p>
+
+                    <p class="follow">Follow Us
+                    <div class="media">
+                        <button>IG</button>
+                        <button>LI</button>
+                        <button>TT</button>
+                        <button>TW</button>
+                        <button>RD</button>
+                        <button>YT</button>
+                    </div>
+                    </p>
+                </div>
+
+                <!-- right-portion -->
+
+                <div class="location-right-portion">
+                    <p class="rp-head">FOR PRESS
+                    <p class="rp-text">pr@hogi.io</p>
+                    </p>
+                    <p class="rp-head">FOR PARTENER
+                    <p class="rp-text">collab@hogi.io</p>
+                    </p>
+                    <p class="rp-head">FOR BRAND
+                    <p class="rp-text">workwith@hogi.io</p>
+                    </p>
+                </div>
+
+            </div>
+
+        
+
+        <!-- ====================================================================================================================== -->
+
+        <!-- ABOUT SECTION -->
+
+         
+            <div class="container8">
+
+                <!-- left-portion -->
+                <div class="about-left-portion">
+                    <img src="https://hogi.io/wp-content/themes/twentytwenty/assets/src/images/logo-2.svg" alt="">
+                    <p class="p1">Hogi is a forward-thinking brand development agency with a customer-centric approach.</p>
+
+                    <!-- privacy policy -->
+                    <div class="privacy">
+                        <div>Privacy Policy</div>
+                        <div>Cookie Policy</div>
+                        <div>Terms and Conditions</div>
+                    </div>
+                    <p class="p2">© 2023 Hogi Brand Building Agency. All Rights Reserved</p>
+                </div>
+
+                <!-- right-portion -->
+                <div class="about-right-portion">
+
+                    <!-- our services -->
+                    <div class="services">
+                        <p class="about-right-portion-head"> Our Services
+                            <li>Strategy</li>
+                            <li>Branding</li>
+                            <li>Digital marketing</li>
+                            <li>Content Writing</li>
+                            <li>Creative</li>
+                            <li>Vedio Production</li>
+                            <li>Web Development</li>
+                        </p>
+                    </div>
+
+                    <!-- our campany -->
+                    <div class="our-campany">
+                        <p class="about-right-portion-head"> Our Campany</p>
+                        <li>About Us</li>
+                        <li>Media</li>
+                        <li>Carrier</li>
+                        <li>Project</li>
+                        <li>Team</li>
+                        <li>Contact Us</li>
+                    </div>
+
+                </div>
+            </div>
+         
+    </div>
+    </div>
+
+</body>
+
+</html>
